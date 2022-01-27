@@ -40,7 +40,7 @@ describe('QA Interview Test Code', () => {
     it('Purchase verification', () => {
         cy.visit(apiURL);
         cy.contains('Nexus').click();
-        cy.contains('Add to cart').click();
+        cy.contains('Add to cart').click({force:true});
         cy.get('nav').contains('Cart').click();
         cy.contains('Nexus').should('be.visible');
         cy.get('#tbodyid').find('tr').should('have.length', 1);
