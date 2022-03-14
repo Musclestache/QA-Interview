@@ -50,12 +50,6 @@ describe('QA Interview Test Code', () => {
         cy.get('nav').contains('Cart').click();
         cy.contains('Nokia').should('be.visible');
         cy.get('#tbodyid').find('tr').should('have.length', 2);
-        cy.get('nav').contains('Home').click();
-        cy.get('nav').contains('Next').click();
-        cy.contains('ASUS').click();
-        cy.contains('Add to cart').click();
-        cy.contains('ASUS').should('be.visible');
-        cy.get('#tbodyid').find('tr').should('have.length', 3);
         cy.contains('Place Order').click();
         cy.get('#name').type('amanda');
         cy.get('#country').type('USA');
